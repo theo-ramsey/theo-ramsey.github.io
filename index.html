@@ -143,7 +143,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(63, 97, 255, 0.75); /* translucent blue */
+      background: rgba(63, 97, 255, 0.75);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -180,7 +180,7 @@
       overflow: auto;
       background-color: rgba(0,0,0,0.9);
     }
-    
+
     .modal-content {
       margin: auto;
       display: block;
@@ -189,7 +189,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
-    
+
     .close-btn {
       position: absolute;
       top: 20px;
@@ -200,9 +200,139 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    
+
     .close-btn:hover {
       color: #bbb;
+    }
+
+    /* -----------------------------
+       CASE STUDY STYLES (NEW)
+    ------------------------------ */
+    .case-study {
+      background: #ffffff;
+      text-align: left;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .case-study h2, .case-study h3 {
+      text-align: center;
+      color: #1a1a1a;
+      margin-top: 0;
+    }
+
+    .case-study .subhead {
+      text-align: center;
+      max-width: 820px;
+      margin: 10px auto 0;
+      color: #555;
+      padding: 0 20px;
+    }
+
+    .case-study .callouts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 28px 20px 0;
+    }
+
+    .case-study .callout {
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 16px 16px 12px;
+      background: #fafbff;
+    }
+
+    .case-study .callout strong {
+      display: block;
+      color: #3f61ff;
+      margin-bottom: 6px;
+    }
+
+    .case-study .divider {
+      height: 1px;
+      background: #eaeaea;
+      margin: 40px 20px;
+    }
+
+    .case-study .cs-section {
+      margin: 0 20px 34px;
+    }
+
+    .case-study .cs-section h4 {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+      color: #1a1a1a;
+    }
+
+    .case-study .cs-section p {
+      margin: 0 0 16px;
+      color: #555;
+    }
+
+    .cs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .cs-grid.two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .cs-card {
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .cs-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .cs-card .cs-caption {
+      padding: 12px 14px 14px;
+      font-size: 0.98em;
+      color: #444;
+      border-top: 1px solid #eee;
+      background: #fcfcfc;
+    }
+
+    .cs-card .cs-caption small {
+      display: block;
+      margin-top: 6px;
+      color: #777;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(63, 97, 255, 0.12);
+      color: #3f61ff;
+      font-weight: 600;
+      font-size: 0.9em;
+      margin-right: 8px;
+    }
+
+    .disclaimer {
+      border-left: 4px solid #3f61ff;
+      background: #f3f6ff;
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .impact-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #555;
     }
   </style>
 </head>
@@ -216,38 +346,202 @@
   </header>
 
   <section class="section">
-  <h2>Portfolio</h2>
-  <p>A few snapshots of recent dashboards and automation work.</p>
+    <h2>Portfolio</h2>
+    <p>A few snapshots of recent dashboards and automation work.</p>
 
-  <div class="portfolio-gallery">
-    <a href="https://lookerstudio.google.com/s/upp0UqC4mOk" target="_blank" class="portfolio-item">
-      <img src="images/project1.png" alt="Sales Dashboard">
-      <div class="overlay">
-        <div class="overlay-text">Sales Performance Dashboard<br>(Looker Studio)</div>
-      </div>
-    </a>
-    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmIwYTg3NzMtMWMzYy00MTkzLWI4MDctMTZkNzc1ODRjYjY3IiwidCI6IjJmZDBhMThjLWFjOTktNDQ2NC04ODdiLTRjZGQyODA1MDAwOSIsImMiOjZ9" target="_blank" class="portfolio-item">
-      <img src="images/project2.png" alt="Global Economic Indicators">
-      <div class="overlay">
-        <div class="overlay-text">Global Economic Indicators<br>(Power BI)</div>
-      </div>
-    </a>
-    <a href="https://colab.research.google.com/drive/1lQav7FRfs8iqGYNeZ027jx53Bronq1UT?usp=sharing" target="_blank" class="portfolio-item">
-      <img src="images/project3.png" alt="Financial Data Automation">
-      <div class="overlay">
-        <div class="overlay-text">Financial Data Automation<br>(SQL, Python, GScript)</div>
-      </div>
-    </a>
-    <a href="https://app.powerbi.com/view?r=eyJrIjoiYzU1MWRjMWMtOWY2ZC00MTY5LTk3ODQtOGRhZjZhMTc1MzFlIiwidCI6IjJmZDBhMThjLWFjOTktNDQ2NC04ODdiLTRjZGQyODA1MDAwOSIsImMiOjZ9" target="_blank" class="portfolio-item">
-      <img src="images/project4.png" alt="Sales Rep Data">
-      <div class="overlay">
-        <div class="overlay-text">Sales Rep Data<br>(Power BI)</div>
-      </div>
-    </a>
-    <!-- Add more items as needed -->
-  </div>
-</section>
+    <div class="portfolio-gallery">
+      <a href="https://lookerstudio.google.com/s/upp0UqC4mOk" target="_blank" class="portfolio-item">
+        <img src="images/project1.png" alt="Sales Dashboard">
+        <div class="overlay">
+          <div class="overlay-text">Sales Performance Dashboard<br>(Looker Studio)</div>
+        </div>
+      </a>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiYmIwYTg3NzMtMWMzYy00MTkzLWI4MDctMTZkNzc1ODRjYjY3IiwidCI6IjJmZDBhMThjLWFjOTktNDQ2NC04ODdiLTRjZGQyODA1MDAwOSIsImMiOjZ9" target="_blank" class="portfolio-item">
+        <img src="images/project2.png" alt="Global Economic Indicators">
+        <div class="overlay">
+          <div class="overlay-text">Global Economic Indicators<br>(Power BI)</div>
+        </div>
+      </a>
+      <a href="https://colab.research.google.com/drive/1lQav7FRfs8iqGYNeZ027jx53Bronq1UT?usp=sharing" target="_blank" class="portfolio-item">
+        <img src="images/project3.png" alt="Financial Data Automation">
+        <div class="overlay">
+          <div class="overlay-text">Financial Data Automation<br>(SQL, Python, GScript)</div>
+        </div>
+      </a>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiYzU1MWRjMWMtOWY2ZC00MTY5LTk3ODQtOGRhZjZhMTc1MzFlIiwidCI6IjJmZDBhMThjLWFjOTktNDQ2NC04ODdiLTRjZGQyODA1MDAwOSIsImMiOjZ9" target="_blank" class="portfolio-item">
+        <img src="images/project4.png" alt="Sales Rep Data">
+        <div class="overlay">
+          <div class="overlay-text">Sales Rep Data<br>(Power BI)</div>
+        </div>
+      </a>
+      <!-- Add more items as needed -->
+    </div>
+  </section>
 
+  <!-- =============================
+       CASE STUDY SECTION (NEW)
+  ============================== -->
+  <section class="section case-study">
+    <h2>Case Study: Retail Data Automation & Decisioning</h2>
+    <p class="subhead">
+      End-to-end POS-to-dashboard stack built for a retail operator. This case study shows the data foundation,
+      reporting model, real operating dashboards, and a clearly-labeled synthetic promo lift template.
+    </p>
+
+    <div class="callouts">
+      <div class="callout">
+        <strong>Outcome</strong>
+        Replaced a $30K/year bookkeeping role through automation after the role holder departed.
+      </div>
+      <div class="callout">
+        <strong>Capability</strong>
+        Integrated multiple datasets into a reporting layer to enable drilldowns from store → department → SKU.
+      </div>
+      <div class="callout">
+        <strong>AWG Relevance</strong>
+        Demonstrates the mechanics of proof-of-performance reporting (lift, margin impact, ROI story).
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cs-section">
+      <h4><span class="pill">1</span>The Business Problem</h4>
+      <p>
+        Raw POS exports were not decision-ready, trend visibility was limited, and bookkeeping depended on a single
+        role (key-person risk). The goal was to build a repeatable system that produced trusted KPIs and operator-ready views.
+      </p>
+
+      <div class="cs-grid two">
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_01_PIPELINE_OVERVIEW.png" alt="Pipeline overview (placeholder)">
+          <figcaption class="cs-caption">
+            Pipeline overview: POS → transformation → structured datasets → dashboards & operational outputs.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_01_PIPELINE_OVERVIEW.png</small>
+          </figcaption>
+        </figure>
+
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_02_COLAB_COVER.png" alt="Colab cover (placeholder)">
+          <figcaption class="cs-caption">
+            Automation & analysis notebook used to document the approach and workflow design.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_02_COLAB_COVER.png</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h4><span class="pill">2</span>Data Foundation: Integrated Sources</h4>
+      <p>
+        Built a reporting layer on top of normalized sources (daily item sales facts + product master + department/vendor reference data).
+      </p>
+
+      <div class="cs-grid">
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_03_LOOKER_DATA_SOURCES.png" alt="Looker Studio data sources (placeholder)">
+          <figcaption class="cs-caption">
+            Looker Studio data sources: multiple datasets feeding a single report.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_03_LOOKER_DATA_SOURCES.png</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h4><span class="pill">3</span>Data Model: Facts + Dimensions (Blended Dataset)</h4>
+      <p>
+        Blended Daily PLU Sales (facts) with PLU master (cost/retail/vendor) and department reference data to enable consistent KPI rollups and drilldowns.
+      </p>
+
+      <div class="cs-grid">
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_04_LOOKER_BLEND_DATA.png" alt="Looker Studio blend data (placeholder)">
+          <figcaption class="cs-caption">
+            Reporting semantic layer: fact table joined to product + department dimensions.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_04_LOOKER_BLEND_DATA.png</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h4><span class="pill">4</span>Business Outputs: Dashboards That Drive Decisions (Real Data)</h4>
+      <p>
+        Operator-ready dashboards used for inventory focus, SKU velocity diagnostics, and identifying profit drivers versus dead inventory.
+      </p>
+
+      <div class="cs-grid two">
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_05_DEPARTMENT_SALES.png" alt="Department Sales dashboard (placeholder)">
+          <figcaption class="cs-caption">
+            Executive view: store & department performance with drilldown to item-level drivers.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_05_DEPARTMENT_SALES.png</small>
+          </figcaption>
+        </figure>
+
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_06_PRODUCT_MOVEMENT.png" alt="Product Movement dashboard (placeholder)">
+          <figcaption class="cs-caption">
+            SKU diagnostic view: movement over time with pricing & margin context.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_06_PRODUCT_MOVEMENT.png</small>
+          </figcaption>
+        </figure>
+
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_07_TOP_SELLERS.png" alt="Top Sellers dashboard (placeholder)">
+          <figcaption class="cs-caption">
+            Profit drivers: top sellers and margin contributors to guide ordering and merchandising focus.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_07_TOP_SELLERS.png</small>
+          </figcaption>
+        </figure>
+
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_08_ZERO_MOVERS.png" alt="Zero Movers dashboard (placeholder)">
+          <figcaption class="cs-caption">
+            Zero movers: dead inventory visibility to trigger markdown, discontinuation, or vendor action.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_08_ZERO_MOVERS.png</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h4><span class="pill">5</span>AWG-Relevant Extension: Promo Lift Measurement Template (Synthetic)</h4>
+      <p>
+        The historical dataset did not include promotions. To demonstrate marketing measurement competency and proof-of-performance storytelling,
+        a promo lift dashboard template was created using synthetic promo events and synthetic results.
+      </p>
+
+      <div class="disclaimer">
+        <strong>Template dataset (synthetic):</strong> Promo events and results shown are synthetic and provided only to demonstrate measurement design,
+        KPI structure, and reporting storytelling. They are not derived from the real POS dataset.
+      </div>
+
+      <div class="cs-grid">
+        <figure class="cs-card">
+          <img src="CASE_STUDY_IMAGE_URL_09_PROMO_LIFT_TEMPLATE.png" alt="Promo Lift Template dashboard (placeholder)">
+          <figcaption class="cs-caption">
+            Promo lift template: lift$, lift%, units lift, margin lift, basket proxy, ROAS, baseline vs promo trend, and top drivers.
+            <small>Placeholder: CASE_STUDY_IMAGE_URL_09_PROMO_LIFT_TEMPLATE.png</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h4><span class="pill">6</span>Business Impact</h4>
+      <ul class="impact-list">
+        <li>Automated bookkeeping workflows after a staff departure, avoiding a $30K/year backfill.</li>
+        <li>Created repeatable KPI reporting and trend visibility to support inventory and operational decisioning.</li>
+        <li>Enabled drilldowns from store → department → SKU to identify drivers and reduce dead inventory.</li>
+        <li>Demonstrated a proof-of-performance reporting structure aligned to retail marketing networks (via synthetic template).</li>
+      </ul>
+    </div>
+  </section>
+  <!-- =============================
+       END CASE STUDY SECTION
+  ============================== -->
 
   <section class="about">
     <img src="images/your-photo.jpeg" alt="Photo of You">
@@ -298,18 +592,18 @@
     &copy; 2025 Theo Ramsey | Built with HTML + GitHub Pages
   </footer>
 
-<!-- Modal for enlarged image -->
-<div id="imageModal" style="display:none;">
-  <span class="close-btn">&times;</span>
-  <img class="modal-content" id="modalImage" />
-</div>
+  <!-- Modal for enlarged image -->
+  <div id="imageModal" style="display:none;">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
 
   <script>
     // Get modal elements
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.querySelector(".close-btn");
-  
+
     // Enable click-to-enlarge for all cert images
     // Only targets images with the cert-img class
     document.querySelectorAll('.cert-img').forEach(img => {
@@ -318,20 +612,19 @@
         modalImg.src = img.src;
       });
     });
-  
+
     // Close modal
     closeBtn.onclick = function () {
       modal.style.display = "none";
     };
-  
+
     // Close if clicking outside image
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
     };
-  </script>  
+  </script>
 
 </body>
 </html>
-
